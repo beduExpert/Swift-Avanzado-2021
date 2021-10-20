@@ -1,29 +1,40 @@
 `Desarrollo Mobile` > `Swift Avanzado`
 
-## Comenzando el Proyecto
 
-### OBJETIVO 
+## Reto numero 3 - Quizz
 
-- Crear la base del proyecto de este módulo.
+### Objetivo: Integrar los conceptos aprendidos de metodos mutating en Enum, struct y protocolos.
 
-#### REQUISITOS 
+###Requisistos 
+Xcode 12.3
 
-1. Xcode 11
+###Desarrollo.
 
-#### DESARROLLO
+En base al proyecto que se proporciona desarrollar un quizz que permita elegir de entre 3 posibles opciones.
 
-Implementar una App, que tenga una distribución de elementos similar a esta vista.
+En este proyecto se proporcionan una arquitectura MVC, con una parte de desarrollo, se espera el alumno concluya el proyecto desarrollando las funcionalidades y metodos que cumplan con los siguientes puntos.
 
-Los botones deben tener un Enum para saber que tipo son.
 
-Interfaz sugerida:
+Modelo de Datos
 
-![](0.png)
+Desarrollar los siguientes metodos:
 
-Los componentes a implementar son:
+getScore() : permite obtener el score.
+nextQuestion() permite obtener la siguiente pregunta.
+checkAnswer() permite validar si la pregunta es correcta o no.
 
-- CollectionView con un custom cell que tenga un UIImageView para poder mostrar fotos.
-- Un subview con dos Labels.
-- UIButton redondeado
-- UIImageView redondeado
-- Todo en el ViewController principal.
+getQuestionText() permite obtener el texto de la pregunta.
+getAnswers()  obtener las respuestas
+getProgress() obtener el progeso  la formula seria numeroPregunta/ totalPreguntas
+
+ViewController
+
+En las acciones del boton answerButtonPressed realizar los siguientes puntos.
+
+Validar cuando el usuario selecciona la respuesta correcta y cambiar el color del boton de las opciones.
+
+en el metodo updateUI()
+
+Colocar en los botones correspondientes cada una de las preguntas.
+Colocar el score en la etiqueta correspondiente.
+
