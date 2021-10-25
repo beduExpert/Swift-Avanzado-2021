@@ -1,11 +1,11 @@
 `Desarrollo Mobile` > `Swift Avanzado`
 
 
-## Titulo del Ejemplo
+## Protocolos
 
 ### OBJETIVO
 
--  Identificar que el extensión es solo para aquellas clases del tipo que Self indica y solo para aquellas que conforman su protocolo.
+-  Crear un protocolo el que nos regrese un numero random como resultado.
 
 #### REQUISITOS
 
@@ -13,17 +13,17 @@
 
 #### DESARROLLO
 
-Crear una clase `ViewControllerB` que **NO** conforme el protocolo `ProtocolName`.
+Crear un protocolo `NuestroProtocolo` el cual tendra una función `devuelveNumRandom`
 
-Debe heredar de `UIViewController`.
+Crear una clase `NuestraClase`que herede de `NuestroProtocolo`.
 
-¿Es posible acceder a los valores del Extensión mediante el `ViewControllerB`?
+¿Es posible que nuestra clase pueda funcionar correctamente sin implementar la función del protocolo?
 
-1.- Comenzamos creando un protocolocon alguna función:
+1.- Comenzamos creando un protocolo con la función:
 
 ```
-protocol ProtocolName {
-    func doSomething()
+protocol NuestroProtocolo {
+    func devuelveNumRandom() -> Double
 }
 ```
 
@@ -45,18 +45,22 @@ extension ProtocolName where Self: UIViewController {
 ```
 import UIKit
 
-protocol ProtocolName {
-    func doSomething()
+protocol NuestroProtocolo {
+    func devuelveNumRandom() -> Double
 }
-extension ProtocolName where Self: UIViewController {
-    func blah() {
-        print("Blah")
+
+class NuestraClase: NuestroProtocolo {
+    var lastRandom = 0.0
+    let a = 3877.0
+    let b = 29573.0
+    
+    func devuelveNumRandom() -> Double {
+        lastRandom = (lastRandom * a + b)
+        return lastRandom
     }
 }
 
-class ViewController : UIViewController, ProtocolName {
-    func doSomething() {
-        print("Do Something");
-    }
-}
+let resultado = NuestraClase()
+
+print("Nuestro numero random: \(resultado.devuelveNumRandom())")
 ```
