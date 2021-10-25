@@ -46,7 +46,7 @@ class NuestraClase: NuestroProtocolo {
 
 ```
 let resultado = NuestraClase()
-print("Nuestro: \(resultado.devuelveNumRandom())")
+print("Nuestro numero random: \(resultado.devuelveNumRandom())")
 ```
 
 **El código completo:**
