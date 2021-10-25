@@ -1,16 +1,24 @@
+//: Playground - noun: a place where people can play
+
 import UIKit
 
-protocol ProtocolName {
-    func doSomething()
+protocol NuestroProtocolo {
+    func devuelveNumRandom() -> Double
 }
-extension ProtocolName where Self: UIViewController {
-    func blah() {
-        print("Blah")
+
+class NuestraClase: NuestroProtocolo {
+    var lastRandom = 0.0
+    let a = 3877.0
+    let b = 29573.0
+    
+    func devuelveNumRandom() -> Double {
+        lastRandom = (lastRandom * a + b)
+        return lastRandom
     }
 }
 
-class ViewController : UIViewController, ProtocolName {
-    func doSomething() {
-        print("Do Something");
-    }
-}
+let resultado = NuestraClase()
+
+print("Nuestro: \(resultado.devuelveNumRandom())")
+
+
