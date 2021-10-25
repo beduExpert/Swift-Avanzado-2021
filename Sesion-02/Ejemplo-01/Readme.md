@@ -27,17 +27,26 @@ protocol NuestroProtocolo {
 }
 ```
 
-2.- Con un Extension podemos agregarle funcionalidad, por ejemplo agregar otro metodo/función.
-Pero esta vez queremos que el protocolo solo pueda ser implementado por la clase `UIViewController`.
-
-Entonces agregamos una función nueva a solo esta clase:
+2.- Creamos nuestra clase `NuestraClase` heredando de `NuestroProtocolo` en la que agregaremos unos valores default para poder hacer el calculo de nuestro numero random::
 
 ```
-extension ProtocolName where Self: UIViewController {
-    func blah() {
-        print("Blah")
+class NuestraClase: NuestroProtocolo {
+    var lastRandom = 0.0
+    let a = 3877.0
+    let b = 29573.0
+    
+    func devuelveNumRandom() -> Double {
+        lastRandom = (lastRandom * a + b)
+        return lastRandom
     }
 }
+```
+
+3.- Instanciamos la clase e imprimimos en consola el numero random:
+
+```
+let resultado = NuestraClase()
+print("Nuestro: \(resultado.devuelveNumRandom())")
 ```
 
 **El código completo:**
