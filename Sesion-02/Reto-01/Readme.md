@@ -1,11 +1,11 @@
  
 `Desarrollo Mobile` > `Swift Avanzado`
 
-## Titulo del Ejemplo 
+## Reto Protocolos
 
 ### OBJETIVO 
 
-- Identificar que el extensión es solo para aquellas clases del tipo que Self indica y solo para aquellas que conforman su protocolo.
+- Generar nuestros protocolos para implementar funciones especificas dentro de nuestros viewmodel.
 
 #### REQUISITOS 
 
@@ -13,44 +13,52 @@
 
 #### DESARROLLO
 
-Con base en el `Ejemplo-01`, implementar una clase que herede de `NSObject` y conforme el protocolo antes creado.
+Con base en el `Ejemplo-01`, implementar un protocolo con 3 funciones las cuales nos ayuden a:
+- Generar nombre completo
+- Obtener nombre
+- Generar nombre completo comenzando por apellido
 
-Intentar acceder a los métodos de la extensión.
 
 <details>
 	<summary>Solucion</summary>
-	<p>Crearemos una nueva clase, llamemosla MyClass.</p>
-	<p>Agregaremos algo de codigo, una funcion.</p>
-   <p>Hacemos que MyClass conforme el protocolo ProtocolName.</p>
-   <p>El código a implementar seria el siguiente: </p>
+	<p>Creamos el protocolo con las 3 funciones que necesitaremos, todas regresaran un String como respuesta.</p>
+	<p>Creamos nuestra clase que sera nuestro viewmodel para adaptar el modelo MVVM.</p>
+	<p>Como suponemos que ya tenemos los datos crearemos las constantes a nuestro viewmodel con nuestro nombre y apellido.</p>
+	<p>En nuestro viewmodel instanciamos el protocolo y agregamos las funciones.</p>
+	<p>Agregamos el codigo a implementar y aplicamos la referencia para invocar las clases necesarias.</p>
+	<p>El código a implementar seria el siguiente: </p>
  
 ```
 import UIKit
 
-protocol ProtocolName {
-    func doSomething()
+protocol AccesosNombreProtocolo {
+    func obtenerNombreCompleto() -> String
+    func obtenerNombre() -> String
+    func obtenerNombreCompletoPorApellido() -> String
 }
-extension ProtocolName where Self: UIViewController {
-    func blah() {
-        print("Blah")
+
+class MiViewModel: AccesosNombreProtocolo {
+    var nombre: String = "Alejandro"
+    var apellido: String = "Hernandez"
+        
+    func obtenerNombreCompleto() -> String {
+        return "\(nombre) \(apellido)"
+    }
+    
+    func obtenerNombre() -> String {
+        return nombre
+    }
+    
+    func obtenerNombreCompletoPorApellido() -> String {
+        return "\(apellido) \(nombre)"
     }
 }
 
-class ViewController : UIViewController, ProtocolName {
-    func doSomething() {
-        print("Do Something");
-    }
-}
-
-class MyClass: NSObject, ProtocolName {
-    func doSomething() {
-        print("Do Something");
-    }
-}
-
-let m: MyClass = MyClass()
-m.doSomething()
+let accion = MiViewModel()
+print("El nombre es: \(accion.obtenerNombre())")
+print("El nombre completo es: \(accion.obtenerNombreCompleto())")
+print("El nombre completo iniciando con apellido es: \(accion.obtenerNombreCompletoPorApellido())")
 ```
 
- <p>la instancia de MyClass no tiene acceso a la extensión del protocolo debido a que no es del mismo tipo que Self especifica. </p>
+ <p>vemos que en nuestro viewmodel podemos hacer los cambios en nuestra logica de negocio lo que genera la separacion de la vista. </p>
 </details> 
