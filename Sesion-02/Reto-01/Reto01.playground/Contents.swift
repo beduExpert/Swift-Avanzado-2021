@@ -1,25 +1,32 @@
+//: Playground - noun: a place where people can play
+
 import UIKit
 
-protocol ProtocolName {
-    func doSomething()
+protocol AccesosNombreProtocolo {
+    func obtenerNombreCompleto() -> String
+    func obtenerNombre() -> String
+    func obtenerNombreCompletoPorApellido() -> String
 }
-extension ProtocolName where Self: UIViewController {
-    func blah() {
-        print("Blah")
+
+class MiViewModel: AccesosNombreProtocolo {
+    var nombre: String = "Alejandro"
+    var apellido: String = "Hernandez"
+        
+    func obtenerNombreCompleto() -> String {
+        return "\(nombre) \(apellido)"
+    }
+    
+    func obtenerNombre() -> String {
+        return nombre
+    }
+    
+    func obtenerNombreCompletoPorApellido() -> String {
+        return "\(apellido) \(nombre)"
     }
 }
 
-class ViewController : UIViewController, ProtocolName {
-    func doSomething() {
-        print("Do Something");
-    }
-}
+let accion = MiViewModel()
+print("El nombre es: \(accion.obtenerNombre())")
+print("El nombre completo es: \(accion.obtenerNombreCompleto())")
+print("El nombre completo iniciando con apellido es: \(accion.obtenerNombreCompletoPorApellido())")
 
-class MyClass: NSObject, ProtocolName {
-    func doSomething() {
-        print("Do Something");
-    }
-}
-
-let m: MyClass = MyClass()
-m.doSomething()
