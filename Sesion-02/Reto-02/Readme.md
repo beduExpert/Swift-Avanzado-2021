@@ -100,8 +100,8 @@ extension MusicListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel.text = data[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? MyTableViewCell else {return UITableViewCell()}
+        cell.texto1.text = data[indexPath.row]
 
         return cell
     }
