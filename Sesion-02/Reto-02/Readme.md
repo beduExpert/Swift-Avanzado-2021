@@ -2,11 +2,11 @@
 `Desarrollo Mobile` > `Swift Avanzado`
 
 	
-## Protocol extension en UITableViewCell
+## Protocol extension en UITableView
 
 ### OBJETIVO 
 
-- Crear un Extensión que pueda ser implementado por una clase únicamente.
+- Crear un Extensión de nuestro UIViewController para que pueda ser implementado por una clase únicamente.
 
 #### REQUISITOS 
 
@@ -15,71 +15,98 @@
 #### DESARROLLO
 
 Implementar un `Extensión` de este protocolo para que permita saber los valores de la clase que lo conforme.
+Implementar un tipo de celda del tipo UITableViewCell en la cual tendremos imagenes, textos y botones
 
 El extensión será de este protocolo:
 
 ```
-protocol RegistrableCell: class {
-	static var nibName: String { get }
-	static var reuseId: String { get {
+class MyTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var imagen: UIImageView!
+    @IBOutlet weak var texto1: UILabel!
+    @IBOutlet weak var texto2: UILabel!
+    @IBOutlet weak var boton: UIButton!
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
 }
 ```
 
-Las variables serán `computed properties`.
+Necesitamos agregar un identificador a la celda, esta por comodidad le llamaremos `cell`
 
-Al **cell** que conforme este protocolo se podran acceder a los valores de **nibName** y **id** fácilmente. 
+
+Al **cell** que conforme este protocolo se podran acceder a los valores que le agreguemos fácilmente. 
 
 Entonces:
-¿cual seria la manera de registrarlo en un tableview fácilmente?
+¿cual seria la manera de utilizarlo facilmente en nuestra vista?
 
 <details>
 	<summary>Solucion</summary>
-	<p> Creamos un proyecto nuevo en Xcode, con un TableView.</p>
-	<p> Creamos extensión del protocolo. Ya que el protocolo es de tipo class, solo clases pueden conformarlo. La extensión usara Self para acceder a los properties de la clase que conforme.</p>
+	<p> Creamos un proyecto nuevo en Xcode, y agregamos un TableView en nuestro ViewController.</p>
+	<p> Creamos una extencion donde tengamos las funciones del `TableView`.</p>
+	<p> Agregamos el delegate y el datasource a la extención.</p>
 
 ```
-extension RegistrableCell {
-  
-  static var nibName: String {
-    return String(describing: self)
-  }
-  
-  static var reuseId: String {
-    return String(describing: self)
-  }
+extension MyViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {        
+        return UITableViewCell()
+    }
+    
+    
+}
 ```
  
-<p> Para simplificar el registro de celdas, pasaremos el TableView como parámetro. Agregamos una nueva función.</p>
+<p> Agregamos unos datos para probar su funcionamiento.</p>
 	
-```
-static func register(in tableView: UITableView) {
-    tableView.register(UINib(nibName: Self.nibName, bundle: nil),
-                       forCellReuseIdentifier: Self.reuseId)
-  }
+
 ```
 <p> El código final: </p>
 
 ```
-protocol RegistrableCell: class {
-  static var nibName: String { get }
-  static var reuseId: String { get }
+class MusicListViewController: UIViewController {
+
+    //@IBOutlet weak var showButton: UIButton!
+
+    var data:[String] = [
+        "Elemento 1", "Elemento 2", "Elemento 3"
+    ]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
 }
 
-extension RegistrableCell {
-  
-  static var nibName: String {
-    return String(describing: self)
-  }
-  
-  static var reuseId: String {
-    return String(describing: self)
-  }
-  
-  static func register(in tableView: UITableView) {
-    tableView.register(UINib(nibName: Self.nibName, bundle: nil),
-                       forCellReuseIdentifier: Self.reuseId)
-  }
+
+extension MusicListViewController: UITableViewDelegate, UITableViewDataSource {    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel.text = data[indexPath.row]
+
+        return cell
+    }
 }
+
 ```
   
 </details> 
