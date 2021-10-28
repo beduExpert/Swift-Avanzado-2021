@@ -32,8 +32,8 @@ Agregar opciones para:
 
 
 Funcionalidad para las opciones del menú:
-Play, deberá a comenzar a tocar la canción, en este momento solo mandar un alert que diga que se comenzará a tocar la canción.
-Descarga, solo mostrará un “alert” con los datos de la canción a descargar, pero al hacerlo una vez desaparece esta opción del menú.
-Eliminar de playlist, permitirá quitarla del arreglo de objetos o elementos con el que se trabaje.
+<p>Play, deberá a comenzar a tocar la canción, en este momento solo mandar un alert que diga que se comenzará a tocar la canción.</p>
+<p>Descarga, solo mostrará un “alert” con los datos de la canción a descargar, pero al hacerlo una vez desaparece esta opción del menú.</p>
+<p>Eliminar de playlist, permitirá quitarla del arreglo de objetos o elementos con el que se trabaje.</p>
 
 
