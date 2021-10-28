@@ -6,7 +6,8 @@
 #### REQUISITOS
 
 1. Proyecto del Reto-03 de la Sesión-01 terminado.
-2. Xcode 11
+2. Proyecto del Reto-03 de la Sesión-02 terminado.
+3. Xcode 11
 
 
 ### OBJETIVO
