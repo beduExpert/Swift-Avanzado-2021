@@ -24,16 +24,18 @@ Crea un ViewController donde podrás incorporar el listado de canciones añadida
 
 
 
-Crear elementos de tabla para el manejo del ViewModel de las celdas, puedes hacer uso del video que viene en el material de esta sesión.
-Agregar opciones para:
+<p>Crear elementos de tabla para el manejo del ViewModel de las celdas, puedes hacer uso del video que viene en el material de esta sesión.
+Agregar opciones para:</p>
 - Comenzar a tocar (Play)
 - Descarga
 - Eliminar de playlist
 
 
-Funcionalidad para las opciones del menú:
-<p>Play, deberá a comenzar a tocar la canción, en este momento solo mandar un alert que diga que se comenzará a tocar la canción.</p>
-<p>Descarga, solo mostrará un “alert” con los datos de la canción a descargar, pero al hacerlo una vez desaparece esta opción del menú.</p>
-<p>Eliminar de playlist, permitirá quitarla del arreglo de objetos o elementos con el que se trabaje.</p>
+<p>Funcionalidad para las opciones del menú:</p>
+- Play, deberá a comenzar a tocar la canción, en este momento solo mandar un alert que diga que se comenzará a tocar la canción.
+- Decarga, solo mostrará un “alert” con los datos de la canción a descargar, pero al hacerlo una vez desaparece esta opción del menú.
+- Eliminar de playlist, permitirá quitarla del arreglo de objetos o elementos con el que se trabaje. En este momento solo mandara el alert de la accion a realizar
+
+<p>Deberas usar codigo reutilizable por lo que evita generar codigo "basura", esto aplica al codigo anterior generado</p>
 
 
