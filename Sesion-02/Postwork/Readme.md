@@ -26,21 +26,22 @@ Crear estructura de nuestros objetos para ser los DTO (Data Transfer Object) que
 
 ![Listado](List.png)
 <br>Crear elementos de tabla para el manejo del ViewModel de las celdas, puedes hacer uso del video que viene en el material de esta sesión.
-Agregar opciones para:
-<br>
-![Menu](Menu.png)
-<br>
+<br><br>Agregar opciones para:
 
-- Comenzar a tocar (Play)
+
+<br>- Comenzar a tocar (Play)
 <br>- Descarga
 <br>- Eliminar de playlist
 
-<p> </p>
-<p>Funcionalidad para las opciones del menú:</p>
+<br>
+<br>Funcionalidad para las opciones del menú:
 
-- Play, deberá a comenzar a tocar la canción, en este momento solo mandar un alert que diga que se comenzará a tocar la canción.
+<br>- Play, deberá a comenzar a tocar la canción, en este momento solo mandar un alert que diga que se comenzará a tocar la canción.
 <br>- Decarga, solo mostrará un “alert” con los datos de la canción a descargar, pero al hacerlo una vez desaparece esta opción del menú.
 <br>- Eliminar de playlist, permitirá quitarla del arreglo de objetos o elementos con el que se trabaje. En este momento solo mandara el alert de la accion a realizar
+<br>
+<br>
+![Menu](Menu.png)
 <br>
 
 <p> </p>
