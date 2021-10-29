@@ -21,10 +21,10 @@ Implementar el uso de MVVM en nuestro proyecto.
 Con base en la aplicación que has ido desarrollando a lo largo del curso crearás los archivos Models y ViewModels para los elementos necesarios con el objetivo de validar lo aprendido y crear el funcionamiento de los siguientes puntos:
 
 Crear estructura de nuestros objetos para ser los DTO (Data Transfer Object) que se usarán en el ViewModel, estos DTO deberán corresponder a las opciones trabajadas en la Sesión 1, las opciones que debes contemplar son Nombre, Artista, Imagen.
-Crear un boton que nos lleve al listado de canciones.
-Crea un ViewController donde podrás incorporar el listado de canciones añadidas, como ejemplo puedes guiarte de la imagen siguiente:
+<br>Crear un boton que nos lleve al listado de canciones.
+<br>Crea un ViewController donde podrás incorporar el listado de canciones añadidas, como ejemplo puedes guiarte de la imagen siguiente:
 
-Imagen 1
+
 
 <p>Crear elementos de tabla para el manejo del ViewModel de las celdas, puedes hacer uso del video que viene en el material de esta sesión.
 Agregar opciones para:</p>
