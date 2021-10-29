@@ -27,6 +27,7 @@ Crear estructura de nuestros objetos para ser los DTO (Data Transfer Object) que
 ![Listado](List.png)
 <br>Crear elementos de tabla para el manejo del ViewModel de las celdas, puedes hacer uso del video que viene en el material de esta sesión.
 Agregar opciones para:
+<br>
 ![Menu](Menu.png)
 <br>
 
