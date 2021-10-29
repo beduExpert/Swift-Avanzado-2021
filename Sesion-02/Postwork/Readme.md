@@ -25,12 +25,11 @@ Crear estructura de nuestros objetos para ser los DTO (Data Transfer Object) que
 <br>Crea un ViewController donde podrás incorporar el listado de canciones añadidas, como ejemplo puedes guiarte de la imagen siguiente:
 
 ![Listado](List.png)
-
-<p>Crear elementos de tabla para el manejo del ViewModel de las celdas, puedes hacer uso del video que viene en el material de esta sesión.
-Agregar opciones para:</p>
-<br>
+<br>Crear elementos de tabla para el manejo del ViewModel de las celdas, puedes hacer uso del video que viene en el material de esta sesión.
+Agregar opciones para:
 ![Menu](Menu.png)
 <br>
+
 - Comenzar a tocar (Play)
 <br>- Descarga
 <br>- Eliminar de playlist
