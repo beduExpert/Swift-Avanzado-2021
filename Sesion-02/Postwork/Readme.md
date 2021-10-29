@@ -37,7 +37,7 @@ Agregar opciones para:</p>
 <br>- Decarga, solo mostrará un “alert” con los datos de la canción a descargar, pero al hacerlo una vez desaparece esta opción del menú.
 <br>- Eliminar de playlist, permitirá quitarla del arreglo de objetos o elementos con el que se trabaje. En este momento solo mandara el alert de la accion a realizar
 <br>
-![](Menu.png)
+
 <p> </p>
 <p>Deberas usar codigo reutilizable por lo que evita generar codigo "basura", esto aplica al codigo anterior generado</p>
 
