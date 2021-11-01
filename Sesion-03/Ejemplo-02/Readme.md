@@ -20,7 +20,7 @@ func anotherMethod<T> (first: T, second: T) {
 }
 ```
 
-Ahora, queremos manejar tipos de datos diferentes, creamos una variante de Generic utilizando DOS generics.
+Ahora, queremos manejar tipos de datos diferentes, creamos una variante de Generic utilizando DOS generics, usar T para ek primero y U para el segundo.
 
 ```
 func anotherMethod<T, U> (first: T, second: U) {
