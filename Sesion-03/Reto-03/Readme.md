@@ -69,7 +69,7 @@ extension Currency {
 
 ```
 var c = Currency.MXN
-c["Mexico"]
+print(c["Mexico"])
 ```
 
 </details> 
