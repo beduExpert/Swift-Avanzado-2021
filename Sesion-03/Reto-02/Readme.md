@@ -5,7 +5,7 @@
 
 ### OBJETIVO 
 
-- Implementación de generics con parámetros que conformen un protocolo.
+- Implementación de generics con parámetros que conformen un protocolo usando "Comparable".
 
 
 #### REQUISITOS 
