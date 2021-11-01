@@ -20,7 +20,7 @@ Se observará cuando el **VC2** aparece, entonces mostraremos en consola un mens
 
 Al mostrarse la segunda vista, en el `viewDidLoad()` enviar el post hacia el NotificationCenter.
 
-En el **VC2** agregamos un `deinit{}`, dentro de este un print para asegurar que se ejecuta el apagado del Notification.
+En el **VC2** agregamos un `deinit{}`, dentro de este un print para asegurar que se ejecuta la destrucció de la Notification.
 
 <details>
 	<summary>Solución</summary>
