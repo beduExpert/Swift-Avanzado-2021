@@ -64,7 +64,7 @@ Pero pero pero... Xcode te arroja un error:
 
 ![](subscript1.png)
 
-Claro, no se ha definido ningún Subscript, definamos uno:
+Claro, no se ha definido ningún Subscript, definamos uno en una extensión de Person:
 
 ``` Swift
 extension Person {
