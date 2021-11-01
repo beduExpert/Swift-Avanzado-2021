@@ -22,7 +22,6 @@
 
 	- [Reto 01](Reto-01)
 
-- Generics y Subscripts
 - Generics Classes and Functions
 
 	- [Ejemplo 02](Ejemplo-02)
