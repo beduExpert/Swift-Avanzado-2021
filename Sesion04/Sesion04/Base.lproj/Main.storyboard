@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sesion04" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UmY-ou-rng">
+                                <rect key="frame" x="179" y="437.5" width="56.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Hilos"/>
+                                <connections>
+                                    <action selector="action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zv5-Sv-fUv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4V-aG-dsB">
+                                <rect key="frame" x="173.5" y="503" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="actionNormal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G11-Oc-oXi"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="jry-Ks-Ta9">
+                                <rect key="frame" x="188.5" y="176" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gFc-1i-65w">
+                                <rect key="frame" x="20" y="253" width="374" height="4"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6b-ox-RCN">
+                                <rect key="frame" x="173.5" y="379" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="actionLoader:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y3e-iM-LuH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UmY-ou-rng" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="5v9-eD-1KF"/>
+                            <constraint firstItem="UmY-ou-rng" firstAttribute="top" secondItem="b6b-ox-RCN" secondAttribute="bottom" constant="27.5" id="O5d-N7-urp"/>
+                            <constraint firstItem="UmY-ou-rng" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QYn-jA-Wx9"/>
+                            <constraint firstItem="W4V-aG-dsB" firstAttribute="top" secondItem="UmY-ou-rng" secondAttribute="bottom" constant="34.5" id="UlX-NV-shH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gFc-1i-65w" secondAttribute="trailing" constant="20" id="YuM-9E-X7q"/>
+                            <constraint firstItem="b6b-ox-RCN" firstAttribute="centerX" secondItem="UmY-ou-rng" secondAttribute="centerX" id="b0v-UZ-GBE"/>
+                            <constraint firstItem="gFc-1i-65w" firstAttribute="top" secondItem="jry-Ks-Ta9" secondAttribute="bottom" constant="40" id="b7Q-t1-cAN"/>
+                            <constraint firstItem="W4V-aG-dsB" firstAttribute="centerX" secondItem="UmY-ou-rng" secondAttribute="centerX" id="bn8-lr-meS"/>
+                            <constraint firstItem="jry-Ks-Ta9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="132" id="gSk-8V-OWQ"/>
+                            <constraint firstItem="jry-Ks-Ta9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lYj-Ma-q6c"/>
+                            <constraint firstItem="gFc-1i-65w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="r7r-B3-Avc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loader" destination="jry-Ks-Ta9" id="jkn-km-WDK"/>
+                        <outlet property="progressView" destination="gFc-1i-65w" id="wzP-jK-Ioe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
