@@ -1,10 +1,10 @@
 `Desarrollo Mobile` > `Swift Avanzado`
 
-## Manejo de cámara con AVCaptureSession
+## Manejo de múltiples procesos, concurrencia, GCD Grand Central Dispatch, Operations y async/await
 
 ### OBJETIVOS 
 
-- Lo que esperamos que el alumno aprenda al finalizar la sesion 
+- El alumno podrá tener claridad sobre el uso de multiples hilos y ser capaz de usar su potencial 
 
 ### REQUISITOS
 
