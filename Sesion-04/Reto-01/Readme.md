@@ -28,13 +28,7 @@ Así como se llevo a cabo el uso de los hilos, implementar una animación simple
 <p> Asignamos el codigo correspondiente</p>
 <p> Eliminamos toda animación existente en el progressbar</p>
 
-```
-struct ComprarDulces {
-	
-
-<p> Así como una función, agregamos el 	throws` al final de la función. </p>
-	
-```
+```	
 // stop any current animation
         self.progressView.layer.sublayers?.forEach { $0.removeAllAnimations() }
         self.progressView.setProgress(0.0, animated: false)
@@ -47,7 +41,6 @@ struct ComprarDulces {
         }
 ```
 
-<p> Finalmente la implementación utilizando un *try* simple:</p>
 
 
 </details> 
