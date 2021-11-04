@@ -1,32 +1,24 @@
 `Desarrollo Mobile` > `Swift Avanzado`
 
 
-## Catching errors
+## Extensión para uso de hilos
 
 ### OBJETIVO
 
-- Implementar una estructura do-catch para manejar el error definido.
+- Multiples hilos con funcion generica
 
 #### REQUISITOS
 
 1. Xcode 11
-2. Playgrounds
 
 
 #### DESARROLLO
 
-Implementación de la clase del `Ejemplo-01` con: 
+Implementación de la clase del `Ejemplo-01` con multiples hilos
 
-`try!` y `try?`
+Generamos la extension de `DispatchQueue`
 
-Manejar el error con `do-catch`.
+Aplicamos una accion al terminar la tarea que se haya programado y se pinta en consola
 
-Para poder manejar `try` sin ningún operador adicional tales como `!` o `?` es necesario utilizar la estructura `do-catch`.
 
-despues de `do {` agregamos el código que es potencialmente susceptible a errores.
-
-Dicho esto, podemos utilizar la palabra `try`.
-
-Finalmente en la parte del `catch` podemos dejarlo simplemente como es o agregar un error. En caso de agegar un error solo entrará a ese bloque de código si y solo si ese error ocurre, de lo contrario es ignorado.
-
-![](0.png)
+![](02.png)
