@@ -48,6 +48,6 @@ Vemos que estamos disparando el evento con diferencia de tiempo
 
 El codigo final y output:
 
-![](0a.png)
+![](01.png)
   
   
