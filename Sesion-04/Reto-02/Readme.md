@@ -1,68 +1,25 @@
 `Desarrollo Mobile` > `Swift Avanzado`
 
 	
-## Variables Opcionales mediante throws
+## Obtencion de objetos "random" con await async
 
 ### OBJETIVO 
 
--  Implementar un try? y crear una variable opcional.
+-  Simular la solicitud a servicios y obtener objetos con datos random.
 
 #### REQUISITOS 
 
 1. Xcode 11
-2. Playgrounds
 
 #### DESARROLLO
 
-Del `Reto-01` implementar un código que permita la creación de un Optional llamado "Pizza".
+Del `Reto-01` y `Ejercicio-03` implementar un código que permita la simulación de cargas de trabajo en serie y paralelo.
 
-```
-
-struct Item {
-  var price: Int
-  var count: Int
-}
-
-enum OxxoErrors: Error {
-  case NoTenemosJoven
-}
-
-class Oxxo {
-  var inventario = ["HotDog": Item(price: 20, count: 10),
-                    "Maruchan": Item(price: 12, count: 5)]
-  
-  func comprar(item name: String) throws {
-    guard let item = inventario[name] else {
-      throw OxxoErrors.NoTenemosJoven
-    }
-    print("Pagando: $ \(item.price) MXN")
-    print("Gracias vuelva pronto")
-  }
-  
-  func precio(item name: String) throws -> Int {
-    guard let item = inventario[name] else {
-      throw OxxoErrors.NoTenemosJoven
-    }
-    return item.price
-  }
-}
-
-let o = Oxxo()
-do {
-  try o.comprar(item: "Pizza")
-} catch OxxoErrors.NoTenemosJoven {
-  print("Ya le dije que no tenemos")
-}
-
-```
 
 <details>
 	<summary>Solucion</summary>
-<p>La solución es simple, dentro de las opciones del try tenemos try?./p>
+<p>La solución es simple, se crea una estructura de objeto en la que los valores de retorno en el campo numerico sea random./p>
 	
-```
-// Optional
-let value = try? o.precio(item: "Pizza")
-```
+
 	
 </details> 
