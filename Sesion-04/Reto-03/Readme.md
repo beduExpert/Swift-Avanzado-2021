@@ -24,7 +24,7 @@ Es decir, al aparecer el **ViewControllerB** se debe cargar la funcionalidad de 
 
 Al tomar una fotografía, poder regresar a la vista principal y agregar dicha fotografía en el CollectionView.
 
-El orden de las fotos no es importane.
+El orden de las fotos no es importante.
 
 
 <details>
