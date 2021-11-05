@@ -1,119 +1,75 @@
 `Desarrollo Mobile` > `Swift Avanzado`
 
-## Fotos con AVCaptureSession
+## Entendimiento async/await
 
 ### OBJETIVO
 
-- Implementar una app con los pasos de AVCaptureSession.
+- En esta actividad, crearemos dos funciones para ejemplificar el uso de async y await con el manejo de hilos.
 
 #### REQUISITOS
 
 1. Xcode 11
-2. iPhone con iOS 13
-3. Cable Lightning original
 
 #### DESARROLLO
 
-0.- Al crear el proyecto, establecer permisos de uso de Camara:
+- Crea un nuevo proyecto en xCode, con un tipo de vista única.
+- Agregar un botón simple con el que dispararemos el uso de los hilos de forma básica.
+- Agregar acción al botón donde cargaremos 2 métodos similares, en ellos probaremos el async.let y el await para ver su funcionamiento.
+- Simularemos con un sleep() la demora en la carga de imagenes
+- En el segundo metodo agregamos mas imagenes para probar su funcionamiento en paralelo
+- Usaremos el tipo de cola Background
+- Imprime el resultado
 
-![](Permisos.png)
+Comenzamos creando nuestro boton y asignandole accion
+```
+@IBAction func asyncTest(_ sender: UIButton)  {
+        DispatchQueue.global(qos: .background).async {
+            DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
+                self.loadPhotos()
+                self.loadPhotos2()
+            })
+        }
+    }
+```
 
-Creamos una clase llamada PreviewView que herede de UIView. Esta servirá para mostrar lo que la cámara ve.
+Creamos nuestros 2 metodos que haran la funcion de buscar las imagenes:
 
 ```
-import UIKit
-import AVFoundation
+  func loadPhotos()  {
+        Task {
+             let firstPhoto =  await downloadPhoto(time: 0.0)
+             let secondPhoto = await  downloadPhoto(time: 2.0)
+             let thirdPhoto =  await downloadPhoto(time: 1.0)
 
-class PreviewView: UIView {
-  var videoPreviewLayer: AVCaptureVideoPreviewLayer {
-    guard let layer = layer as? AVCaptureVideoPreviewLayer else {
-      fatalError("Expected `AVCaptureVideoPreviewLayer` type for layer. Check PreviewView.layerClass implementation.")
+            let photos = [firstPhoto, secondPhoto, thirdPhoto]
+            print(photos)
+        }
     }
     
-    return layer
-  }
-  
-  var session: AVCaptureSession? {
-    get {
-      return videoPreviewLayer.session
-    }
-    set {
-      videoPreviewLayer.session = newValue
-    }
-  }
-  
-  // MARK: UIView
-  
-  override class var layerClass: AnyClass {
-    return AVCaptureVideoPreviewLayer.self
-  }
-}
-```
+    func loadPhotos2()  {
+        Task {
+             async let firstPhoto = downloadPhoto(time: 0.0)
+             async let secondPhoto = downloadPhoto(time: 2.0)
+            async let thirdPhoto = downloadPhoto(time: 1.0)
+            async let _4Photo = downloadPhoto(time: 1.0)
+            async let _5Photo = downloadPhoto(time: 1.0)
 
-En el ViewController tendremos una instancia de dicha clase:
-
-```
-  @IBOutlet private weak var previewView: PreviewView!
-```
-
-1.- Creamos una session con `AVCaptureSession()`.
-
-```
-  private let session = AVCaptureSession()
-```
-
-2.- Creamos una instancia de `AVCapturePhotoOutput()`.
-
-```
-  private let photoOutput = AVCapturePhotoOutput()
-```
-
-3.- Agregamos a la sesión el output mediante la función `addOutput()`.
-
-4.- Creamos un commit de la sesión mediante `commitConfiguration()`.
-
-```
-private func configureSession() {
-    session.beginConfiguration()
-    
-    // Add video input.
-    do {
-      let videoDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .front)
-      let videoDeviceInput = try AVCaptureDeviceInput(device: videoDevice!)
-      session.addInput(videoDeviceInput)
-    }
-    catch {
-      print("Couldn't create video device input: \(error)")
-      session.commitConfiguration()
-      return
-    }
-    
-    // Add photo output.
-    session.addOutput(photoOutput)
-    session.commitConfiguration()
-  }
-```
-
-5.- La acción de tomar foto se ejecuta en un `DispatchQueue`.
-
-```
-   self.sessionQueue.async {
-      self.photoOutput.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
+            let photos = await [firstPhoto, secondPhoto, thirdPhoto, _4Photo, _5Photo]
+            print(photos)
+        }
     }
 ```
 
-6.- Por último, la foto tomada será recibida como tipo Data en funciones `Delegate`.
+Simulamos con otra funcion la espera de la carga
 
 ```
-extension ViewController: AVCapturePhotoCaptureDelegate{
-  func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-    if let error = error {
-      print("Error capturing photo: \(error)")
-    } else {
-      photoData = photo.fileDataRepresentation()
+ func downloadPhoto(time: Double) async -> String {
+ 
+        sleep(UInt32(time))
+        return "Photo: \(time)"
     }
-  }
 ```
+
 
 
 
