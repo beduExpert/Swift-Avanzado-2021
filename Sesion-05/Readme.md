@@ -5,9 +5,9 @@
 
 ### OBJETIVOS 
 
+- Aplicar el uso de animaciones basicas
+- Implementar acciones posteriores a nuestra animación
 - Reforzar la sintaxis y funcionamiento de un Closure.
-- Crear completions Handlers.
-- Aplicar el uso de closures con Animations básicos. 
 
 #### ORGANIZACION DE LA CLASE 
 
