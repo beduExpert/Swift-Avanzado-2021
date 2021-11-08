@@ -11,22 +11,21 @@
 
 #### ORGANIZACION DE LA CLASE 
 
-**Closures**
+**Animations**
 
-- Completions Handlers
+- Animaciones
 
 	- [Ejemplo 01](Ejemplo-01)
 	- [Reto 01](Reto-01)
 
-- Escaping keyword 
+- Acciones al terminar nuestra animación
 
 	- [Ejemplo 02](Ejemplo-02)
 	- [Reto 02](Reto-02)
 
-**Animations**
+**Closures**
 
-- Fade, Bounce 
-- Custom animations
+- Closures
 	- [Ejemplo 03](Ejemplo-03)
 	- [Reto 03](Reto-03)
 
