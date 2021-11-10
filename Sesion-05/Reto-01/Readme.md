@@ -1,37 +1,31 @@
 `Desarrollo Mobile` > `Swift Avanzado`
 
-## Código para descarga de imágenes.
+## Código para manejo de errores con animación.
 
 ### OBJETIVO 
 
-- Armar una función que servirá de esqueleto para descargar imágenes de manera asíncrona.
+- Desarrolla una interfaz de logueo con animaciones.
 
 #### REQUISITOS 
 
 1. Xcode 11
-2. Playgrounds
 
 #### DESARROLLO
 
-Código para descarga de imágenes.
-Implementar un esqueleto que incluya un `queue`.
-El `queue` tendrá prioridad de `.background`.
-Y una **función** con un completion definido.
-El queue ejecutará algún bloque, solo dejarlo indicado con `{}`.
+Desarrolla una interfaz que te solicite usuario y password
+Al no contar con servicios dejar en duro la validación para que el usuario sea `admin` y su password sea de igual manera `admin`.
+Ejecutar validaciones y animaciones
+
 
 <details>
 	<summary>Solución</summary>
-	<p> Comenzamos definiendo un DispatchQueue, agregando su tag o identificador, y un quality of service de tipo background. </p>
+	<p> Creamos la pantalla del login
+	<br>Creamos la pantalla de exito
+	<br>Realizar la comparacion de los elementos y ejecutar estos escenarios:
+	<br>- Usuario y password correcto: Mandar a otra vista conde se cambie de color el fondo con una animación
+	<br>- Usuario o password incorrectos: Animar con un estilo `shake` los campos de usuario y password y mostrar un mensaje en pantalla que nos indique que alguno de los datos es incorrecto
+	<br>- Campos en blanco: Al presionar el botón, si se detecta que alguno de los campos no tiene contenido animar el elemento que no tiene contenido. 
+	<br>
+	<br>Ejecutamos nuestra app</p>
 
-```
-DispatchQueue(label: "com.bedu.download.images", qos: DispatchQoS.background)
-```
-
-<p> Definiremos una función con dos parámetros, uno de URL, y un completion. </p>
-<p> El queue definido se encargará de ejecutar un bloque de codigo, dejaremos esto indicado. </p>
-```
-func loadImages(from url: URL, completion: (_ image: UIImage) -> Void) {
-    downloadQueue.async(execute: {})
-}
-```
 </details> 
