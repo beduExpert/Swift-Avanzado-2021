@@ -33,3 +33,5 @@ UIView.animate(withDuration: 2.0, animations: { () -> Void in
     })
 ```
 5.- Implementar mas variantes.
+
+6.- Ejecutamos
