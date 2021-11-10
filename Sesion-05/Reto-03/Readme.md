@@ -40,7 +40,7 @@ UIView.animate(withDuration: 2.0, animations: { () -> Void in
 ```
 let translate = CGAffineTransform(translationX: 50, y: 250)
 let rotate = CGAffineTransform(rotationAngle: 360)
-let scale = CGAffineTransform(scaleX: 2, y: 2)
+let scale = CGAffineTransform(scaleX: 2, y: 2) 
 ```
 
 7.- Implementamos los Transforms dentro de un bloque de `UIView `animations.
