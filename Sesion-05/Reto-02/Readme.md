@@ -10,7 +10,7 @@
 #### REQUISITOS 
 
 1. Xcode 11
-2. Playgrounds
+2. Playgrounds.
 
 
 #### DESARROLLO
