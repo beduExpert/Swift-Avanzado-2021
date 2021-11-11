@@ -21,7 +21,6 @@ Usando el mismo codigo anterior, dispararemos distintos logueos por medio del se
 <details>
 	<summary>Solucion</summary>
 	<p> La solución es simple, a nuestro Ejemplo 1 de la sesión 3 aprovecharemos lo ya construido invocando con el semaforo con distintos datos para el logueo</p>
-	<br>
 	<p>Aqui elcodigo nuevo</p>
 	![](2.png)
 	
