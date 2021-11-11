@@ -1,33 +1,64 @@
  
 `Desarrollo Mobile` > `Swift Avanzado`
 
-## Integración AVCaptureSession con Proyecto de App
+## Eventos y semaforo
 
 ### OBJETIVO 
 
-- Integrar el código del Ejemplo-03 con el proyecto de App.
+- Integrar el código del Ejemplo-01 de la Sesión 3 con el semáforo.
 
 #### REQUISITOS 
 
 1. Xcode 11
-2. Ejemplo-03 funcionando
-3. iPhone con iOS 13
-4. Cable Lightning
+2. Ejemplo-01 de la sesión 3
 
 #### DESARROLLO
 
-Una vez que el Ejemplo-03 este funcionando.
-
-En el proyecto de la app, en el **ViewControllerB** actualmente en blanco el cuál es mostrado al presionar el botón de cámara, implementar la funcionalidad de cámara.
-
-Es decir, al aparecer el **ViewControllerB** se debe cargar la funcionalidad de camará.
-
-Al tomar una fotografía, poder regresar a la vista principal y agregar dicha fotografía en el CollectionView.
-
-El orden de las fotos no es importante.
+Una vez aprendido el uso de notificaciones y tener conocimiento del semaforo, integraremos ambos en un mismo reto
+Usando el mismo codigo anterior, dispararemos distintos logueos por medio del semaforo tomando como referencia el ejemplo de los niños que quieren usar el ipad
 
 
 <details>
 	<summary>Solucion</summary>
-	<p> Agrega aqui la solucion</p>
+	<p> La solución es simple, a nuestro Ejemplo 1 de la sesión 3 aprovecharemos lo ya construido invocando con el semaforo con distintos datos para el logueo</p>
+	
+	<p> Aqui elcodigo nuevo </p>
+	 let login = LoginManager()
+var loginData: [String: Any] = [:]
+
+
+let semaphore = DispatchSemaphore(value: 1)
+
+DispatchQueue.global().async {
+   print("espera 1")
+   semaphore.wait()
+   print("termino la espera 1")
+loginData = ["userID": 54, "userName": "Ivan"]
+    login.loginWith(loginData)
+    sleep(1)
+   semaphore.signal()
+   print("termina de jugar 1")
+}
+DispatchQueue.global().async {
+   print("espera 2")
+   semaphore.wait()
+loginData = ["userID": 22, "userName": "Alex"]
+    login.loginWith(loginData)
+    print("termino la espera 2")
+    sleep(1)
+   semaphore.signal()
+    print("termina de jugar 2")
+}
+DispatchQueue.global().async {
+    print("espera 3")
+   semaphore.wait()
+    loginData = ["userID": 67, "userName": "Alejandro"]
+        login.loginWith(loginData)
+    print("termino la espera 3")
+   sleep(1)
+   semaphore.signal()
+    print("termina de jugar 3")
+}
+	
+	
 </details> 
