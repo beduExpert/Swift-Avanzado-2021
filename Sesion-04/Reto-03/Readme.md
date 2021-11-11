@@ -24,43 +24,5 @@ Usando el mismo codigo anterior, dispararemos distintos logueos por medio del se
 	<br>
 	<br>Aqui elcodigo nuevo</p>
 	
-	<p> 
-	 let login = LoginManager()
-var loginData: [String: Any] = [:]
-
-
-let semaphore = DispatchSemaphore(value: 1)
-
-DispatchQueue.global().async {
-   print("espera 1")
-   semaphore.wait()
-   print("termino la espera 1")
-loginData = ["userID": 54, "userName": "Ivan"]
-    login.loginWith(loginData)
-    sleep(1)
-   semaphore.signal()
-   print("termina de jugar 1")
-}
-DispatchQueue.global().async {
-   print("espera 2")
-   semaphore.wait()
-loginData = ["userID": 22, "userName": "Alex"]
-    login.loginWith(loginData)
-    print("termino la espera 2")
-    sleep(1)
-   semaphore.signal()
-    print("termina de jugar 2")
-}
-DispatchQueue.global().async {
-    print("espera 3")
-   semaphore.wait()
-    loginData = ["userID": 67, "userName": "Alejandro"]
-        login.loginWith(loginData)
-    print("termino la espera 3")
-   sleep(1)
-   semaphore.signal()
-    print("termina de jugar 3")
-}
-	
-	 </p>
+	![](1.png)
 </details> 
