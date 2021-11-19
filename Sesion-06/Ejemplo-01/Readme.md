@@ -25,11 +25,11 @@ Crea una función donde imprimas en pantalla el listado de elementos que regresa
 
 <details>
 
-        <summary>Solucion</summary>
-        <p> Una vez instalado Alamofire en el proyecto crearemos nuestro manager y haremos uso del metodo GET de nuestro servicio con la finalidad de mostrar en una tabla los elementos obtenidos
-        <br> Genera la interfaz donde tendremos nuestra tabla con una celda custom donde mostraremos los datos en pantalla, la selección de momento no tendrá acción
-        <br></p>
-        <p>Crea tu manager para los llamados al API usando la sintaxis de Alamofire</p>
+Solucion
+Una vez instalado Alamofire en el proyecto crearemos nuestro manager y haremos uso del metodo GET de nuestro servicio con la finalidad de mostrar en una tabla los elementos obtenidos
+Genera la interfaz donde tendremos nuestra tabla con una celda custom donde mostraremos los datos en pantalla, la selección de momento no tendrá acción
+ 
+Crea tu manager para los llamados al API usando la sintaxis de Alamofire
 
 
 Tu Manager debe ser algo similr a esto 
