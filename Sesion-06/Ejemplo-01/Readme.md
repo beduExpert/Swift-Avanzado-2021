@@ -29,9 +29,22 @@ Crea una función donde imprimas en pantalla el listado de elementos que regresa
         <p> Una vez instalado Alamofire en el proyecto crearemos nuestro manager y haremos uso del metodo GET de nuestro servicio con la finalidad de mostrar en una tabla los elementos obtenidos
         <br> Genera la interfaz donde tendremos nuestra tabla con una celda custom donde mostraremos los datos en pantalla, la selección de momento no tendrá acción
         <br></p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
+        <p>Crea tu manager para los llamados al API usando la sintaxis de Alamofire</p>
+
+
+Tu Manager debe ser algo similr a esto 
+![](S6-01.png)
+
+En tu clase de la interfaz has el llamado para hacer una consulta simple
+```
+func getData() {
+        RestServiceManager.shared.GoToInfo(responseType: [SongModel].self, method: .get, endpoint: "songs") { status, data in
+            if let dataResponse = data {
+                self.data = dataResponse
+                self.tableView.reloadData()
+            }
+        }
+    }
+```
+Recuerda que previamente debes haber cargado tus Modelos
 </details>
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
-
-
