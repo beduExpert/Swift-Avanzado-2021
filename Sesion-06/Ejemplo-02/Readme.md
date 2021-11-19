@@ -28,7 +28,7 @@ Solucion
 Necesitaras contar con los 2 metodos, uno donde no necesites payload y otro donde si
 Crea los modelos necesarios para la construccion partiendo de los que podemos obtener desde la pagina del endpoint
 La adaptacion alcodigo debera ser algo asi:
-![](S6-01.png)       
+![](S6-02.png)       
         
 </details>
 
