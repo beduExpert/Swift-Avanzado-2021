@@ -1,27 +1,35 @@
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]
+`Desarrollo Mobile` > `Swift Avanzado`
 
-## Titulo del Ejemplo
+## Preparación para servicios POST
 
 ### OBJETIVO
 
-- Lo que esperamos que el alumno aprenda
+- Usando Alamofire aprenderas al uso de los metodos que requieren un payload (body) como es POST
 
 #### REQUISITOS
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+1. Ejemplo-01
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+Utiliza el proyecto de la actividad 1
+Actualiza el manager para agregar un método que acepte un body.
+Crea el evento para la solicitud de servicios POST.
+Agrega un elemento de tabla en tu vista
+Crea una pantalla para agregar el formulario donde solicitaremos la llamada POST
+Una vez sea exitoso el llamado, regresaremos a nuestra vista anterior
+
+Para el correco uso necesitamos el endpoint https://gorest.co.in/public/v1/ ya que necesitamos uno donde podamos usar metodos con payload
 
 <details>
 
-        <summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
+Solucion
+Necesitaras contar con los 2 metodos, uno donde no necesites payload y otro donde si
+Crea los modelos necesarios para la construccion partiendo de los que podemos obtener desde la pagina del endpoint
+La adaptacion alcodigo debera ser algo asi:
+![](S6-01.png)       
+        
 </details>
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
 
 
