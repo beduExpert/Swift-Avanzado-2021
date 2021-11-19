@@ -47,4 +47,5 @@ func getData() {
     }
 ```
 Recuerda que previamente debes haber cargado tus Modelos
+ Finalmente coloca la informacion obtenida en la tabla
 </details>
