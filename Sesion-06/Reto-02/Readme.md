@@ -1,27 +1,32 @@
  
+`Desarrollo Mobile` > `Swift Avanzado` 
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks] 
 	
-## Titulo del Ejemplo 
+## PUT con Alamofire 
 
 ### OBJETIVO 
 
-- Lo que esperamos que el alumno aprenda 
+- Aplicar los conocimientos adquiridos en la sesión para invocar un metodo PUT
 
 #### REQUISITOS 
 
-1. Lo necesario para desarrollar el ejemplo o el Reto 
+1. Reto-01
+2. xCode 11
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+Aprovechando los avances que tenemos, implementemos accion al seleccionar un elemento
+Avisaremos al usuario si quiere ver detalle, eliminar y actualizar
+Realizaremos una actualizacion a nuestro elemento
 
 <details>
-
-	<summary>Solucion</summary>
-	<p> Agrega aqui la solucion</p>
-	<p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
+	Solucion
+	
+	Agregaremos una opcion para actualizar nuestro elemento
+	Generaremos una vista con esta opción para hacer un update
+	
+	
 </details> 
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
 
+![](S6-R2.png) 
