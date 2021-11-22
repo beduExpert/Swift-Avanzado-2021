@@ -1,27 +1,31 @@
  
+`Desarrollo Mobile` > `Swift Avanzado` 
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks] 
 	
-## Titulo del Ejemplo 
+## Mapear respuestas con Alamofire 
 
 ### OBJETIVO 
 
-- Lo que esperamos que el alumno aprenda 
+- Aplicar los conocimientos adquiridos en la sesión para hacer el mapeo de lo que obtenemos con Alamofire
 
 #### REQUISITOS 
 
-1. Lo necesario para desarrollar el ejemplo o el Reto 
+1. Reto-01 y Reto-02
+2. xCode 11
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+Aprovechando los avances que tenemos, implementaremos la descarga con Alamofire
+
 
 <details>
-
-	<summary>Solucion</summary>
-	<p> Agrega aqui la solucion</p>
-	<p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
+	Solucion
+	
+	Implementaremos los DTOs o Modelos a objetos que pueda interpretar correctamente Alamofire, una vez efectuado lo podremos  usar en nuestro proyecto
+	
+	
+	
 </details> 
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
 
+![](S6-R3.png) 
