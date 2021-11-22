@@ -1,27 +1,32 @@
- 
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks] 
+`Desarrollo Mobile` > `Swift Avanzado` 
+
 	
-## Titulo del Ejemplo 
+## DELETE con Alamofire 
 
 ### OBJETIVO 
 
-- Lo que esperamos que el alumno aprenda 
+- Aplicar los conocimientos adquiridos en la sesión para invocar un metodo DELETE
 
 #### REQUISITOS 
 
-1. Lo necesario para desarrollar el ejemplo o el Reto 
+1. Ejercicio-01 y Ejercicio-02
+2. xCode 11
+3. Cambio de endpoint a los servicios Go Rest
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+Aprovechando los avances que tenemos, implementemos accion al seleccionar un elemento
+Avisaremos al usuario si quiere ver detalle o eliminar
 
 <details>
-
-	<summary>Solucion</summary>
-	<p> Agrega aqui la solucion</p>
-	<p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
+	Solucion
+	
+	Mostraremos un menú para dar la opcion de ver el detalle o eliminar
+	Al seleccionar eliminar invocar el metodo DELETE con la estructura `/public/v1/users/{ID}`
+	Agregaremos tambien la autorizacion al metodo sin payload ya que se requiere para el delete
+	![](S6-R1.png) 
 </details> 
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
+
 
