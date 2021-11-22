@@ -21,7 +21,10 @@ Aprovechando los avances que tenemos, implementaremos la descarga con Alamofire
 <details>
 	Solucion
 	
-	implementaremos la descarga de una imagen
+	Implementaremos la descarga de una imagen, lo necesitaremos en nuestro proyecto final
+	Usaremos una imagen fija en el repo:
+	https://github.com/beduExpert/C1-Swift-Avanzado/blob/master/Sesion-06/Reto-02/foto.jpg?raw=true
+	
 	
 	
 </details> 
