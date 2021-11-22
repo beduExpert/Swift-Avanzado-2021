@@ -25,8 +25,8 @@ Avisaremos al usuario si quiere ver detalle o eliminar
 	Mostraremos un menú para dar la opcion de ver el detalle o eliminar
 	Al seleccionar eliminar invocar el metodo DELETE con la estructura `/public/v1/users/{ID}`
 	Agregaremos tambien la autorizacion al metodo sin payload ya que se requiere para el delete
-	![](S6-R1.png) 
+	
 </details> 
 
 
-
+![](S6-R1.png) 
