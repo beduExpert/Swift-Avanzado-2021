@@ -1,0 +1,6 @@
+framework module Pods_Sesion06 {
+  umbrella header "Pods-Sesion06-umbrella.h"
+
+  export *
+  module * { export * }
+}
