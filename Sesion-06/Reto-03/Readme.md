@@ -28,4 +28,5 @@ Aprovechando los avances que tenemos, implementaremos la descarga con Alamofire
 </details> 
 
 
-![](S6-R3.png) 
+![](S6-R3a.png) 
+![](S6-R3b.png) 
