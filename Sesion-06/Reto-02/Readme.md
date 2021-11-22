@@ -2,11 +2,11 @@
 `Desarrollo Mobile` > `Swift Avanzado` 
 
 	
-## PUT con Alamofire 
+## Descarga imagen con Alamofire 
 
 ### OBJETIVO 
 
-- Aplicar los conocimientos adquiridos en la sesión para invocar un metodo PUT
+- Aplicar los conocimientos adquiridos en la sesión para descragar imagen
 
 #### REQUISITOS 
 
@@ -15,15 +15,13 @@
 
 #### DESARROLLO
 
-Aprovechando los avances que tenemos, implementemos accion al seleccionar un elemento
-Avisaremos al usuario si quiere ver detalle, eliminar y actualizar
-Realizaremos una actualizacion a nuestro elemento
+Aprovechando los avances que tenemos, implementaremos la descarga con Alamofire
+
 
 <details>
 	Solucion
 	
-	Agregaremos una opcion para actualizar nuestro elemento
-	Generaremos una vista con esta opción para hacer un update
+	implementaremos la descarga de una imagen
 	
 	
 </details> 
