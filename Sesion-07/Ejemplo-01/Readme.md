@@ -21,3 +21,4 @@
 5.- Agregamos el Pan Gesture a cada imagen, arrastrando dicho elemento dentro de cada imagen.
 
 ![](0.gif)
+
