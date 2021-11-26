@@ -2,11 +2,11 @@
 
 `Desarrollo Mobile` > `Swift Avanzado`
 	
-## Pinch Gesture
+## Brinca Mario
 
 ### OBJETIVO 
 
--  Implementación de un Pinch Gesture.
+-  Implementacion de un PAN y un TAP.
 
 #### REQUISITOS 
 
@@ -14,7 +14,7 @@
 
 #### DESARROLLO
 
-Implementar el `PinchGestureRecognizer`.
+Implementar el `PanGestureRecognizer`, y `TapGestureRecognizer`.
 
 Al igual que el Ejemplo-01.
 
@@ -26,30 +26,43 @@ Al igual que el Ejemplo-01.
 
 4.- Crear una función de tipo `@IBAction` con un `sender` de tipo `PanGestureRecognizer`.
 
+5.- Agrega por codigo el `TapGestureRecognizer'
+
 <details>
 	<summary>Solución</summary>
-	<p> La función que va conectada con el Gesture debe tener el parámetro de sender igual al gesture, es decir, si es un Pinch gesture, el parámetro debe ser UIPinchGestureRecognizer.</p>
+	<p> La función que va conectada con el Gesture debe tener el parámetro de sender igual al gesture, es decir, si es un Pan gesture, el parámetro debe ser UIPanGestureRecognizer.</p>
 
 ```
-  @IBAction func pinch(recognizer: UIPinchGestureRecognizer) {
+  @IBAction func handlePan(_ sender: UIPanGestureRecognizer){
 
    }
 ```
 
-<p> Obtendremos la escala mediante el recognizer de la función: </p>
+
+<p> Nuestro codigo del PAN nos ayudara a ver el funcionamiento al momento de arrastrar la imagen.</p>
 
 ```
-    let scale = recognizer.scale
-```
+@IBAction func handlePan(_ sender: UIPanGestureRecognizer) {
+        
+        if sender.state == UIGestureRecognizer.State.began {
+            print("Inicio gesture")
+        }
+        else if sender.state == UIGestureRecognizer.State.ended {
+            print("fin gesture")
+        }
+        
+        let translation = sender.translation(in: view)
 
-<p> Mediante el CGAffineTransform crearemos una escala o cambio de tamaño. Luego este nuevo tamaño lo asginaremos al View en cuestión para modificarlo.</p>
+        guard let gestureView = sender.view else {
+            return
+        }
 
-```
-@IBAction func pinch(recognizer: UIPinchGestureRecognizer) {
-    let scale = recognizer.scale
-    let transform = CGAffineTransform(scaleX: scale, y: scale)
-    self.imageView.transform = transform
-    //recognizer.scale = 1
-}
+        gestureView.center = CGPoint(
+            x: gestureView.center.x + translation.x,
+            y: gestureView.center.y + translation.y
+        )
+
+        sender.setTranslation(.zero, in: view)
+    }
 ```
 </details> 
