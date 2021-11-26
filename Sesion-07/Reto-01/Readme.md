@@ -7,6 +7,7 @@
 ### OBJETIVO 
 
 -  Implementacion de un PAN y un TAP.
+-  Poder mover la imagen de Mario con el dedo (PAN) y al darle TAP hacer que brinque
 
 #### REQUISITOS 
 
