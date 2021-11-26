@@ -37,5 +37,5 @@ La idea es implementar alguno o ambos gestures.
 	
 ```
 imageView.addGestureRecognizer(pinchGesture)
-```
+``` 
 </details> 
