@@ -47,7 +47,7 @@ if recognizer.state == UIGestureRecognizer.State.ended {
       self.imageView?.transform = CGAffineTransform(scaleX: scale, y: scale)
     }, completion: nil )
   }
- ```
+ ``` 
 
 </details> 
 
