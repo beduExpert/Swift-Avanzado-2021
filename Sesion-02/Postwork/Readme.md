@@ -31,8 +31,6 @@ Considera que tu proyecto debe cumplir con lo siguiente:
 Requisito
 Sí lo cumple
 No lo cumple
-Manejo de Enum
-
 
 
 
