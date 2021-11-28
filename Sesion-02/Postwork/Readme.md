@@ -1,6 +1,6 @@
 `Desarrollo Mobile` > `Swift Avanzado`
 
-## Protocolos y Patterns
+## Protocolos y delegados
 
 
 ### OBJETIVO
@@ -39,7 +39,7 @@ Manejo de Protocolos
 
 
 
-Manejo de Patterns 
+Manejo de Delegados 
 
 
 
