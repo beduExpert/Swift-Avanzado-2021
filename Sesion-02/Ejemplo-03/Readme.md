@@ -7,7 +7,7 @@
 
 -  Implementar el patrón delegate.
 
-#### REQUISITOS
+#### REQUISITOS 
 
 1. Xcode 11
 
