@@ -18,7 +18,7 @@
 
 **Desarrollar**:
 
-Con base a lo aprendido, continuar el pase del modelo MVc a MVVM
+Con base a lo aprendido, continuar el pase del modelo MVC a MVVM
 Mejoraremos el código implementando extensiones para los elementos que se puedan repetir como alertas simples y validacion de correo
 
 
