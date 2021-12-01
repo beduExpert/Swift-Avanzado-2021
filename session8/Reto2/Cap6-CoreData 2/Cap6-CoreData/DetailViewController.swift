@@ -2,8 +2,8 @@
 //  DetailViewController.swift
 //  Cap6-CoreData
 //
-//  Created by Salvador Lopez on 29/11/21.
-//  Copyright © 2021 Salvador Lopez. All rights reserved.
+//  Created by Arlen Peña on 28/11/21.
+//  Copyright © 2021 Arlen Peña. All rights reserved.
 //
 
 import UIKit
