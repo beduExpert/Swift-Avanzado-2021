@@ -34,7 +34,7 @@ Al igual que el Ejemplo-01.
 	<p> La función que va conectada con el Gesture debe tener el parámetro de sender igual al gesture, es decir, si es un Pan gesture, el parámetro debe ser UIPanGestureRecognizer.</p>
 
 ```
-  @IBAction func handlePan(_ sender: UIPanGestureRecognizer){
+      @objc private func didPan(_ sender: UIPanGestureRecognizer) {
 
    }
 ```
@@ -43,8 +43,8 @@ Al igual que el Ejemplo-01.
 <p> Nuestro codigo del PAN nos ayudara a ver el funcionamiento al momento de arrastrar la imagen.</p>
 
 ```
-@IBAction func handlePan(_ sender: UIPanGestureRecognizer) {
-        
+    //PAN GESTURE
+    @objc private func didPan(_ sender: UIPanGestureRecognizer) {
         if sender.state == UIGestureRecognizer.State.began {
             print("Inicio gesture")
         }
