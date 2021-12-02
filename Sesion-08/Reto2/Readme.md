@@ -21,12 +21,13 @@ https://bedu-swift.herokuapp.com/cobranza.php
 En este Reto tenemos la siguiente pantalla:
 
 Donde únicamente contamos con una tabla y un botón con el texto “Consultar Online”
+![Screenshot](Pantalla1.png)
 Al dar clic mostrará la segunda pantalla que con 2 botones Reload Data y reload Table.
-
+![Screenshot](Pantalla2.png)
 ReloadData, cargara los datos de un servicio, para posteriormente dar clic en Reload Table y mostrar lo que se cargo del servicio.
 
 Al seleccionar uno de los elementos de la tabla mostrará un alerta, donde informa que se ha cargado la información del usuario y es aquí donde se implementa CoreData, ya que la información cargada del usuario seleccionado ahora se encuentra almacenada en el dispositivo, al dar Back o regresar, se muestra la tabla con la información del elemento al que le hemos dado click.
-
+![Screenshot](Pantalla3.png)
 Al seleccionar el elemento de la pantalla principal despliega la siguiente información:
 
 Nombre 
@@ -34,3 +35,4 @@ Email
 Num empleado
 Telefono
 Cargo
+![Screenshot](Pantalla4.png)
