@@ -22,7 +22,7 @@
 4.- Para implementar con el Pan Gesture:
 
 ```
-  @IBAction func pan(sender: UIPanGestureRecognizer) {
+  @objc private func pan(_ sender: UIPanGestureRecognizer) {
     if sender.state == UIGestureRecognizer.State.began {
       print("Inicio gesture")
     }
