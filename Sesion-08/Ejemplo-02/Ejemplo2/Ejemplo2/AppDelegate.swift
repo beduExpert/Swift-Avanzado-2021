@@ -1,22 +1,38 @@
+//
+//  AppDelegate.swift
+//  Ejemplo2
+//
+//  Created by Arlen Peña on 30/11/21.
+//
 
-`Desarrollo Mobile` > `Swift Avanzado`
+import UIKit
+import CoreData
 
-## Persistencia de Datos
-##Ejemplo 1
+@main
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
-### OBJETIVOS 
 
-- Implementar Core Data en un proyecto que actualmente no lo tiene habilitado.
 
-#### DESARROLLO
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        return true
+    }
 
-    En esta ejemplo estaremos trabajando con un proyecto ya creado en el cual, tendremos que implementar Core Data.
-    Para su implementación puedes seguir los siguientes pasos:
+    // MARK: UISceneSession Lifecycle
+
+    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+        // Called when a new scene session is being created.
+        // Use this method to select a configuration to create the new scene with.
+        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    }
+
+    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
+        // Called when the user discards a scene session.
+        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
+        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+
     
-- Paso1:  File->New->File->CoreData->DataModel->ColocarNombre
-- Paso2:  Agregar CoreData en el AppDelegate
-- Paso 3: Estas Lineas de código permitirán que la app interactúe con el Core Data y solo hay que pegarlas al final del App Delegate.
-
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
@@ -26,7 +42,7 @@
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: “”NombreDeTuModeloDatos)
+        let container = NSPersistentContainer(name: "Ejemplo2")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -62,11 +78,6 @@
         }
     }
 
-- Paso4: colocar el import Core Data en nuestro View Controller y en el AppDelegate.
 
-- Paso5. Crear la entidad necesario en este caso Person, con el atributo name de tipo String.
+}
 
-- Paso6. Crear los métodos necesarios para la interacción con CoreData
-
-
-    
