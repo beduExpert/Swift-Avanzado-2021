@@ -1,15 +1,14 @@
-# Ejemplo # - Nombre del ejemplo
 
-## Objetivo
+`Desarrollo Mobile` > `Swift Avanzado`
 
-* Agregar los objetivos del ejemplo (Mínimo agregar 2 objetivos y Borrar está linea una vez se hay leido)
+## Persistencia de Datos
 
-## Desarrollo
+### OBJETIVOS 
+- Implementar funcines de Core Data para insertar elementos en nuestra app.
 
->**💡 Nota para experto(a)**
->
-> Este es un ejemplo por si el experto necesita tener en cuenta un punto clave durante el ejemplo.
->Si no es necesario, puedes borrar esta nota.
+#### Desarrollo
+- Para esta segundo ejemplo trabajaremos con el proyecto del ejemplo1 donde ya tenemos creado una tabla que permite mostrar los elementos insertados en un input.
+- Creamos las entidades necesarias y realizaremos Insert a las tablas.
 
-Aquí se debe agregar el desarrollo del ejemplo
+
 
