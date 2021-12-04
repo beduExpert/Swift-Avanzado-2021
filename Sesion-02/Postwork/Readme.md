@@ -5,9 +5,10 @@
 
 ### OBJETIVO
 
-- Continuar con la adaptacion al modelo MVVM.
-- Emplear los temas desarrollados en las sesiones correspondientes a patrones y delegados. 
-- Implementar protocolos como una mejor práctica de desarrollo y aprovechando el potencial de swift.
+- Construir la adaptación al modelo MVVM.
+- Emplear los temas desarrollados en las sesiones correspondientes a patrones y delegados.
+- Implementar protocolos como una mejor práctica de desarrollo y aprovechando el potencial de Swift.
+
 
 
 #### REQUISITOS
@@ -18,31 +19,21 @@
 
 **Desarrollar**:
 
-Con base a lo aprendido, continuar el pase del modelo MVC a MVVM
-Mejoraremos el código implementando extensiones para los elementos que se puedan repetir como alertas simples y validacion de correo
+Desarrollo
+Con base en lo aprendido, deberás continuar el pase del modelo MVC a MVVM, mejorando el código al implementar extensiones para los elementos que se puedan repetir como:
+Alertas simples 
+Validación de correo
 
+Al tener código repetido podrás hacer uso de las buenas prácticas para utilizarlo, lo cual se hace de la siguiente manera:
 
+![](1.png)
 
-¡Recapitulemos!
+Con estas extensiones, si quieres validar algún texto se coloca de la siguiente forma:
 
-✅ CHECKLIST 
+username.isValidEmail()
 
-Considera que tu proyecto debe cumplir con lo siguiente:
+Donde username es un texto, la función regresa un Bool lo que te ayudará en las validaciones, mismas que de haber un error podrás invocar un alert aprovechando la función creada en la extensión,de la siguiente manera:
 
-Requisito
-Sí lo cumple
-No lo cumple
+self.showSimpleAlert(“Mensaje de error”)
 
-
-
-Manejo de Protocolos
-
-
-
-
-Manejo de Delegados 
-
-
-
-
-
+Aquí siempre lo invocas con self desde un viewController, ya que se marca esta función desde una extensión de UIViewController.
