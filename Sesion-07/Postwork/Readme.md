@@ -23,6 +23,7 @@ Como primer paso agregarás el gesto del TAP de la siguiente manera:
 let gesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
 self.imagen.addGestureRecognizer(gesture)
 self.imagen.isUserInteractionEnabled = true
+
 Agrega el método handleTap con el que obtendrás información desde el plist, la información a mostrar es:
 Versión: 
 Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
