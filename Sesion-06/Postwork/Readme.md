@@ -1,10 +1,12 @@
 `Desarrollo Mobile` > `Swift Avanzado`
 
-## Integración Alamofire con App galeria/fotos
+## Consumo de servicios HTTP Rest
 
 ### OBJETIVO
 
-- En la vista principal, alimentar el CollectionView con fotos descargadas de internet mediante peticiones `GET`.
+Crear el RestServiceManager mediante Alamofire.
+Modificar el objeto CODABLE.
+Descargar el listado de canciones con un servicio GET.
 
 #### REQUISITOS
 
@@ -13,11 +15,36 @@
 
 #### DESARROLLO
 
-1.- Tener funcionando la última versión del proyecto de la App.
 
-2.- Agregar la configuración de `AppTransportSecurity` para poder integrar peticiones HTTP.
+Descarga Alamofire por medio de los PODs. 
+Crea el RestServiceManager. 
+Modifica tu modelo.
+Asigna desde el Controlador del listado de canciones la invocación para descargar la lista de canciones. 
+Limpia el código.
 
-3.- Crear una capa de DataManager que se encargue de las peticiones.
+Recuerda que los elementos PODs que incluimos en el proyecto debe ser instalado por proyecto, para esto en nuestro PODFILE agregaremos:
 
-4.- Con el patrón delegate enviar la respuesta del servicio a la vista principal.
+pod 'Alamofire'
+Una vez hecho esto, en la terminal, ubicándonos en la carpeta del proyecto usaremos el comando
 
+$ pod install
+Con esto ya tendremos Alamofire instalado y listo para usarse como lo vimos durante la sesión
+
+
+Continuando con el proceso, nuestro Manager lo tendrás de la siguiente manera:
+
+![](1.png)
+
+Recuerda que estarás usando GENERICS para un uso genérico. Por lo que, ya no necesitas continuar con la lista de canciones en tu código, ya que directamente irás al servicio, y tu modelo resultará de la siguiente forma:
+
+![](2.png)
+
+Recuerda que tienes tu constante misTracks, esa la cambiarás a una variable asignándole un valor de listado de Tacks vacío, ya que aprovecharás el uso que se le está dando. Finalmente en tu controlador implementarás el llamado al servicio para actualizar tu tabla, viéndose de la siguiente forma:
+
+RestServiceManager.shared.getToServer(responseType: [Track].self, method: .get, endpoint: "songs") { status, data in
+            misTracks = [Track]()
+            if let _data = data {
+                misTracks = _data
+                self.tableView.reloadData()
+            }
+        }
