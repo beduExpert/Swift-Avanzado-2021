@@ -11,11 +11,14 @@
 #### DESARROLLO
 
     En esta ejemplo estaremos trabajando con un proyecto ya creado en el cual, tendremos que implementar Core Data.
+    
     Para su implementación puedes seguir los siguientes pasos:
     
 - Paso1:  File->New->File->CoreData->DataModel->ColocarNombre
-- Paso2:  Agregar CoreData en el AppDelegate
-- Paso 3: Estas Lineas de código permitirán que la app interactúe con el Core Data y solo hay que pegarlas al final del App Delegate.
+Nota este paso lo hemos visto antes en las notas del prework y puedes volver a consultarlo si te surge alguna duda.
+![Screenshot](assets/ModelData.png)
+
+- Paso2:  Estas Lineas de código permitirán que la app interactúe con el Core Data y solo hay que pegarlas al final del App Delegate.
 
     // MARK: - Core Data stack
 
@@ -62,11 +65,15 @@
         }
     }
 
-- Paso4: colocar el import Core Data en nuestro View Controller y en el AppDelegate.
+- Paso3: colocar el import Core Data en nuestro View Controller y en el AppDelegate.
+![Screenshot](assets/importCoreData.png)
 
-- Paso5. Crear la entidad necesario en este caso Person, con el atributo name de tipo String.
 
-- Paso6. Crear los métodos necesarios para la interacción con CoreData
+- Paso4. Crear la entidad necesario en este caso Person, con el atributo name de tipo String.
+![Screenshot](assets/EntidadEjemplo1.png)
+
+
+
 
 
     

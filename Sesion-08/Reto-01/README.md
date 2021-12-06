@@ -10,9 +10,13 @@
 
 #### Desarrollo
 - Realiza un proyecto donde la primera pantalla sea:
-- Consideración el proyecto debe tener activo Core Data si no es así tendrás que implementarlo de forma Manual.
+![Screenshot](assets/Pantalla1Reto1.png)
 
-- El servicio que se consumirá en el Reto 2 tiene una estructura como se muestra a continuación.
+- Consideración el proyecto debe tener activo Core Data si no es así tendrás que implementarlo de forma Manual.
+Nota: Puedes recurrir al directorio del ejemplo 1 o a tu postWork para consultar y resolver alguna duda que se presente para dar solución a este punto.
+
+- Posteriormente se deberás crear una entidad o varias, para poder almacenar la siguiente informacón. 
+
 {
     "name": "Liam Noah",
     "email": "Liam.Noah@gmail.com",
@@ -27,5 +31,7 @@
       "adeudo": "300",
       "notas": "Servicio de combranza a domicilio, cargo extra 5"
     }
-- Desarrolla la entidad que permita almacenar esta información.
+    
+Si tienes alguna consulta o aun no sabes como dar solución a este punto, puedes encontrar la solución en el directorio de Reto2.
+
 
