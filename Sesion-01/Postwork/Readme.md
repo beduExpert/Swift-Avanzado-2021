@@ -24,11 +24,11 @@ Con base en la aplicación que has ido desarrollando a lo largo del curso crear�
 Crear un enum que te permita el manejo de botones de opciones, que se indica en la imagen.
 El menú es el siguiente, considera que pueden cambiar algunas opciones.
 
-Imagen 1
+![](https://assets.bedu.org/contents/TECM0010SWAVBN2X_Swift_Avanzado/TECM0010SWAVBN2X_S1_3_1.jpg)
 
 El menú se encuentra se encuentra ubicado de la siguiente forma:
 
-Imagen 2
+![](https://assets.bedu.org/contents/TECM0010SWAVBN2X_Swift_Avanzado/TECM0010SWAVBN2X_S1_3_2.png)
 
 Algunas de estas opciones serán llenadas con servicios web por lo que deberás considerar colocar las variables como opcionales.
 
@@ -38,6 +38,9 @@ Descarga, solo mostrará un “alert” con los datos de la canción a descargar
 Agregar a playlist, permitirá agregarla al arreglo de objetos o elementos con el que se trabaje.
 Compartir canción, deberá permitir compartir por whatsapp, algunos datos de la canción, como: título de la canción, autor o intérprete, álbum.
 La opción de Love deberá de mostrar una alerta y la opcion unlove.
+
+![](https://assets.bedu.org/contents/TECM0010SWAVBN2X_Swift_Avanzado/TECM0010SWAVBN2X_S1_3_3.png)
+![](https://assets.bedu.org/contents/TECM0010SWAVBN2X_Swift_Avanzado/TECM0010SWAVBN2X_S1_3_4.png)
 
 ¡Recapitulemos!
 
