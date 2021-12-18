@@ -13,29 +13,22 @@
 
 #### DESARROLLO
 
-Implementar de manera programática el gesto de Pinch y el gesto de ScreenEdgePan.
+Implementar el gesto de Pinch y el gesto de ScreenEdgePan.
 
 Con lo visto en los ejemplos anteriores se deberá ser capaz de resolver este reto.
 La idea es implementar alguno o ambos gestures.
 
 <details>
 	<summary>Solución</summary>
-	<p>Crearemos un proyecto con un View o ImageView al cuál le agregaremos uno o dos gestures. </p>
-	<p> A dicho view le habilitamos el property para que pueda detectar interacciones touch.</p>
-
-```
-	imageView.isMultipleTouchEnabled = true
-	imageView.isUserInteractionEnabled = true
-```
-<p> Creamos un property de tipo Gesture, el que deseemos implementar. puede ser PinchGesture o PanGesture.</p>
-
-```
-	let pinchGesture = UIPinchGestureRecognizer(target: self,
-                                                      action: 	#selector(pinchGesture(sender:)))
-```                                                
-<p> Al Image agregamos el Gesture:</p>
+	<p>Crearemos un proyecto con un ImageView al cuál le agregaremos un gesture tipo Pinch. </p>
+	    <p> A dicho view le habilitamos el property para que pueda detectar interacciones touch.</p>
+        <p> Creamos la acción para insertar el código e imprimir un mensaje cuando se disparen cada uno de los estados del gesto.</p>
+        <p> Agregaremos el ScreenEdgePanGestureRecognizer al view principal y creamos la acción, declaramos un arreglo de colores y en la acción seleccionamos un color random para establecer el fondo</p>
+        ```
+            if sender.state == .ended {
+            let randomInt = Int.random(in: 0..<listColors.count)
+            sender.view?.backgroundColor = listColors [randomInt]
+            }
+        ```
 	
-```
-imageView.addGestureRecognizer(pinchGesture)
-``` 
 </details> 

@@ -24,7 +24,7 @@ Al soltar la imagen, debe de regresar a su tamaño original.
 <details>
 	<summary>Solucion</summary>
 	<p> De igual forma que en los ejemplos y retos anteriores, en el UIImageView del Storyboard tenemos asociado un Gesture.</p>
-	<p> Este gesture esta conectado a una función que tiene como parámetro un serder del tipo del gesture.</p>
+	<p> Este gesture esta conectado a una función que tiene como parámetro un sender del tipo del gesture.</p>
 	<p> Implementaremos en dicha función dos condiciones IF que detecten el inicio y fin del gesture.</p>
 	<p>Dentro del IF que detecta el INICIO del gesture ejecutamos la función de escalamiento y animación.</p>
 ```

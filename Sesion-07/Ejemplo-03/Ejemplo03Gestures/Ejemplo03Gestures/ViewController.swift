@@ -8,33 +8,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-  
-  @IBOutlet weak var imageView: UIImageView!
 
-  private let panGestureRecognizer = UIPanGestureRecognizer(target: self,
-                                                            action: #selector(didPan(sender:)))
   override func viewDidLoad() {
     super.viewDidLoad()
-    panGestureRecognizer.delegate = self
-    imageView.isMultipleTouchEnabled = true
-    imageView.isUserInteractionEnabled = true
-    imageView.addGestureRecognizer(panGestureRecognizer)
   }
   
-  @objc func didPan(sender: UIPanGestureRecognizer) {
-    let location = sender.location(in: imageView)
-    let velocity = sender.velocity(in: imageView)
-    let translation = sender.translation(in: imageView)
-    
-    if sender.state == .began {
-      print("Began")
-    } else if sender.state == .changed {
-      print("Changed")
-    } else if sender.state == .ended {
-      print("Ended")
+    @IBAction func didPan(_ sender: UIPanGestureRecognizer) {
+      
+            if sender.state == .began {
+              print("Began")
+            } else if sender.state == .changed {
+              print("Changed")
+            } else if sender.state == .ended {
+              print("Ended")
+            }
+        
+        let translation = sender.translation(in: view)
+        if let view = sender.view {
+          view.center = CGPoint(x: view.center.x + translation.x,
+                                y: view.center.y + translation.y)
+        }
+          sender.setTranslation(CGPoint.zero, in: view)
     }
-  }
+    
 }
-extension ViewController: UIGestureRecognizerDelegate {
-}
-

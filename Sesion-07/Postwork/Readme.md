@@ -19,16 +19,8 @@ Mostrar la información mediante un alert.
 Agrega el gesto PINCH sobre la imagen.
 Incluye la lógica para hacer grande la imagen.
 Con el uso normal de las aplicaciones, siempre tenemos un lugar donde podemos ver información básica sobre la versión o el compilado, en este caso tu app no puede ser la excepción, por lo que lo manejarás aprovechando el uso de los gestos.
-Como primer paso agregarás el gesto del TAP de la siguiente manera:
 
-let gesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-
-self.imagen.addGestureRecognizer(gesture)
-
-self.imagen.isUserInteractionEnabled = true
-
-
-Agrega el método handleTap con el que obtendrás información desde el plist, la información a mostrar es:
+Agrega la acción handleTap con el que obtendrás información desde el plist, la información a mostrar es:
 
 Versión: 
 

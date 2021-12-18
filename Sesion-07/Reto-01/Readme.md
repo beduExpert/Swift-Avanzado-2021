@@ -6,8 +6,8 @@
 
 ### OBJETIVO 
 
--  Implementacion de un PAN y un TAP.
--  Poder mover la imagen de Mario con el dedo (PAN) y al darle TAP hacer que brinque
+-  Implementacion de un PAN, un TAP y un LONGPRESS.
+-  Poder mover la imagen de Mario con el dedo (PAN), al darle TAP hacer que brinque y hacerlo grande al presionarlo durante mas tiempo.
 
 #### REQUISITOS 
 
@@ -15,36 +15,20 @@
 
 #### DESARROLLO
 
-Implementar el `PanGestureRecognizer`, y `TapGestureRecognizer`.
-
-Al igual que el Ejemplo-01.
+Implementar el `PanGestureRecognizer`, el `TapGestureRecognizer` y el `LongPressRecognizer`.
 
 1.- Crear un nuevo proyecto en Xcode con swift como lenguaje y Storyboard.
 
-2.- Agregar un `UIImageView` al Storyboard y conectarlo con el `ViewController`, crear su IBOutlet correspondiente.
+2.- Agregar un `UIImageView` al ViewController en el Storyboard .
 
-3.- Arrastrar un Gesture de tipo `PanGesture` al `UIImageview`. Este Gesture se puede encontrar en el Library.
+3.- Arrastrar los tres gestos de tipo `PanGesture`, `TapGestureRecognizer` y `LongPressRecognizer` al `UIImageview`. Estos gestos se encuentran en la librería.
 
-4.- Crear una función de tipo `@IBAction` con un `sender` de tipo `PanGestureRecognizer`.
+4.- Crear una acción para cada uno de los gestos, arrastrandolos y presionando Ctrl.
 
-5.- Agrega por codigo el `TapGestureRecognizer'
-
-<details>
-	<summary>Solución</summary>
-	<p> La función que va conectada con el Gesture debe tener el parámetro de sender igual al gesture, es decir, si es un Pan gesture, el parámetro debe ser UIPanGestureRecognizer.</p>
+5.- Agrega el código en la acción del `PanGestureRecognizer'
 
 ```
-      @objc private func didPan(_ sender: UIPanGestureRecognizer) {
-
-   }
-```
-
-
-<p> Nuestro codigo del PAN nos ayudara a ver el funcionamiento al momento de arrastrar la imagen.</p>
-
-```
-    //PAN GESTURE
-    @objc private func didPan(_ sender: UIPanGestureRecognizer) {
+        @IBAction func didPan(_ sender: UIPanGestureRecognizer) {
         if sender.state == UIGestureRecognizer.State.began {
             print("Inicio gesture")
         }
@@ -66,4 +50,42 @@ Al igual que el Ejemplo-01.
         sender.setTranslation(.zero, in: view)
     }
 ```
-</details> 
+
+6.- Agrega el código en la acción del `TapGestureRecognizer'
+
+```
+    @IBAction func didTapView(_ sender: UITapGestureRecognizer) {
+        UIView.animate(withDuration: 0.4, delay: 0.2,
+                       animations: {
+            sender.view?.alpha = 0.5
+            sender.view?.center.y = (sender.view?.center.y)! - 40
+                }) { _ in
+                    UIView.animate(withDuration: 0.4, delay: 0.1) {
+                        sender.view?.center.y = (sender.view?.center.y)! + 20
+                        sender.view?.alpha = 1.0
+                    }
+                }
+    }
+```
+
+
+7.- Agrega el código en la acción del `LongPressGestureRecognizer'
+
+```
+       @IBAction func handleLongPress(_ sender: UILongPressGestureRecognizer) {
+        guard let gestureView = sender.view else {
+            return
+        }
+            
+        if sender.state == UIGestureRecognizer.State.began {
+            print("Inicio gesture")
+            gestureView.frame.size.height += 50
+            gestureView.frame.size.width += 50
+        }
+        else if sender.state == UIGestureRecognizer.State.ended {
+            print("fin gesture")
+            gestureView.frame.size.height -= 50
+            gestureView.frame.size.width -= 50
+        }
+    }
+```

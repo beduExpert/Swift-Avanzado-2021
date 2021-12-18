@@ -13,7 +13,7 @@
 
 #### DESARROLLO
 
-1.- Implementaremos los métodos de `UIGestureRecognizer` para detectar cuando iniciamos/terminamos la interacción.
+1.- Implementaremos las acciones de `UIGestureRecognizer` para detectar cuando iniciamos/terminamos la interacción.
 
 2.- Cada recognizer tiene un property llamado `state`.
 
@@ -22,13 +22,14 @@
 4.- Para implementar con el Pan Gesture:
 
 ```
-  @objc private func pan(_ sender: UIPanGestureRecognizer) {
-    if sender.state == UIGestureRecognizer.State.began {
-      print("Inicio gesture")
+    @IBAction func pan(_ sender: UIPanGestureRecognizer) {
+        if sender.state == UIGestureRecognizer.State.began {
+          print("Inicio gesture")
+        }
+        else if sender.state == UIGestureRecognizer.State.ended {
+          print("fin gesture")
+        }
+        
     }
-    else if sender.state == UIGestureRecognizer.State.ended {
-      print("fin gesture")
-    }
-  }
 ```
 

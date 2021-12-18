@@ -16,9 +16,9 @@
 
 1.- Crear un nuevo proyecto en `Xcode`.
 2.- Agregaremos un `ImageView` en el `Main.Storyboard`.
-3.- Conectamos con el `ViewController` declarando los `IBOutlets` correspondientes.
-4.- En el Controller agregamos el vinculo del View con el gesto
-5.- Creamos el metodo para hacer que por medio del gesto se mueva la imagen
+3.- Agregaremos un `PanGestureRecognizer` en el `ImageView` creado.
+4.- Arrastraremos el `PanGestureRecognizer` presionando Ctrl hacia nuestro `ViewController.swift` para crear la acción.
+5.- Llenamos la acción(método) con el código necesario para mover el `ImageView` con el gesto.
 
 ![](0.png)
 
