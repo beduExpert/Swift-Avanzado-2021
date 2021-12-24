@@ -13,12 +13,22 @@
 
 #### DESARROLLO
 
-Implementar las acciones del gesto Pan desde el Storyboard.
+1. Implementar las acciones del gesto Pan desde el Storyboard.
 
-Basarse en el Ejemplo-01 y Ejemplo-02.
+2. Basarse en el Ejemplo-01 y Ejemplo-02.
 
-Por medio del `sender` obtener el valor del `state` y compararlo con los tres mas importantes como `began` o `ended`.
+3. Por medio del `sender` obtener el valor del `state` y compararlo con los tres mas importantes como `began` o `ended`.
 
-El IF-ELSE debe implementarse. La idea detrás de esto es “debuggear” los estados, ver como funciona cada uno de ellos al interacturar con los gestures.
+4. El IF-ELSE debe implementarse. La idea detrás de esto es “debuggear” los estados, ver como funciona cada uno de ellos al interacturar con los gestures
 
-![](0.png)
+```swift
+@IBAction func didPan(_ sender: UIPanGestureRecognizer) {
+  if sender.state == .began {
+    print("Began")
+  } else if sender.state == .changed {
+    print("Changed")
+  } else if sender.state == .ended {
+    print("Ended")
+  }
+}
+
