@@ -21,7 +21,7 @@
 
 4.- Para implementar con el Pan Gesture:
 
-```
+```swift
     @IBAction func pan(_ sender: UIPanGestureRecognizer) {
         if sender.state == UIGestureRecognizer.State.began {
           print("Inicio gesture")
