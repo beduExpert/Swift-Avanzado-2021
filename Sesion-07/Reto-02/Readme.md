@@ -26,28 +26,29 @@ Utilizar `UIView` Animations en conjunto con Gestures.
 	<p> Agregar la acción del gesto en el ViewController con parámetro de tipo UIPanGestureRecognizer.</p>
 	<p> Implementamos en la acción el movimiento al arrastrar la imagen y dos condiciones "if" que detecten el inicio y fin del gesture como se muestra a continuación:</p>
 	
-	
-	let translation = recognizer.translation(in: self.imageView)
-    if let view = recognizer.view {
-      view.center = CGPoint(x: view.center.x + translation.x,
-                            y: view.center.y + translation.y)
-    }
-    recognizer.setTranslation(CGPoint.zero, in: self.imageView)
-    
-    if recognizer.state == UIGestureRecognizer.State.began {
-      scaleWithMove(scale: 1.5)
-    }
-    if recognizer.state == UIGestureRecognizer.State.ended {
-      scaleWithMove(scale: 1.0)
-    }
-	
-
+	@IBAction func pan(_ sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: view)
+        if let view = sender.view {
+          view.center = CGPoint(x: view.center.x + translation.x,
+                                y: view.center.y + translation.y)
+        }
+        sender.setTranslation(CGPoint.zero, in: view)
+        
+        if sender.state == UIGestureRecognizer.State.began {
+            scaleWithMove(scale: 1.5,sender: sender)
+        }
+        if sender.state == UIGestureRecognizer.State.ended {
+          scaleWithMove(scale: 1.0,sender: sender)
+        }
+    	}
+ 
 <p>La función que se encarga de escalar y animar la imágen es la siguiente: </p>
  
- 	private func scaleWithMove(scale: CGFloat) { UIView.animate(withDuration: 0.5, animations: { () -> Void in
-      		self.imageView?.transform = CGAffineTransform(scaleX: scale, y: scale)
-   		 }, completion: nil )
- 	 }
+  	private func scaleWithMove(scale: CGFloat, sender: UIPanGestureRecognizer ) {
+   		UIView.animate(withDuration: 0.5, animations: { () -> Void in
+        		sender.view?.transform = CGAffineTransform(scaleX: scale, y: scale)
+    		}, completion: nil )
+  	}
  
 </details> 
 
