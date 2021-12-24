@@ -21,16 +21,21 @@
                                 <rect key="frame" x="132" y="72" width="150" height="132"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Gtd-KZ-LhO" appends="YES" id="fEq-07-o8d"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <connections>
-                        <outlet property="imageView" destination="nAn-iB-RqV" id="bsj-nB-igO"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Gtd-KZ-LhO">
+                    <connections>
+                        <action selector="pan:" destination="BYZ-38-t0r" id="mjY-KY-dDc"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-57.971014492753625" y="117.85714285714285"/>
         </scene>

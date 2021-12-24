@@ -9,38 +9,32 @@ import UIKit
 
 class ViewController: UIViewController {
   
-  @IBOutlet weak var imageView: UIImageView!
+    
   
   override func viewDidLoad() {
     super.viewDidLoad()
-      
-      // Initialize Pan Gesture Recognizer
-      let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(pan(_:)))
-
-      // Add Pan Gesture Recognizer
-      imageView.addGestureRecognizer(panGestureRecognizer)
-      
   }
   
-  @objc private func pan(_ recognizer: UIPanGestureRecognizer) {
-    let translation = recognizer.translation(in: self.imageView)
-    if let view = recognizer.view {
-      view.center = CGPoint(x: view.center.x + translation.x,
-                            y: view.center.y + translation.y)
+    @IBAction func pan(_ sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: view)
+        if let view = sender.view {
+          view.center = CGPoint(x: view.center.x + translation.x,
+                                y: view.center.y + translation.y)
+        }
+        sender.setTranslation(CGPoint.zero, in: view)
+        
+        if sender.state == UIGestureRecognizer.State.began {
+            scaleWithMove(scale: 1.5,sender: sender)
+        }
+        if sender.state == UIGestureRecognizer.State.ended {
+          scaleWithMove(scale: 1.0,sender: sender)
+        }
     }
-    recognizer.setTranslation(CGPoint.zero, in: self.imageView)
     
-    if recognizer.state == UIGestureRecognizer.State.began {
-      scaleWithMove(scale: 1.5)
-    }
-    if recognizer.state == UIGestureRecognizer.State.ended {
-      scaleWithMove(scale: 1.0)
-    }
-  }
   
-  private func scaleWithMove(scale: CGFloat) {
+    private func scaleWithMove(scale: CGFloat, sender: UIPanGestureRecognizer ) {
     UIView.animate(withDuration: 0.5, animations: { () -> Void in
-      self.imageView?.transform = CGAffineTransform(scaleX: scale, y: scale)
+        sender.view?.transform = CGAffineTransform(scaleX: scale, y: scale)
     }, completion: nil )
   }
 }
